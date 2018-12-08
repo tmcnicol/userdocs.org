@@ -1,0 +1,28 @@
+.listItem {
+  height: 5em;
+  width: 100%;
+  padding: 1em 1em 1.5em;
+  margin-bottom: 1em;
+
+  background: white;
+
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.listItem__key {
+  max-width: 10%;
+}
+
+.listItem__key::after {
+  content: '-';
+  margin: 0.5em;
+}
+
+.listItem__text {
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 60%;
+  display: inline;
+}

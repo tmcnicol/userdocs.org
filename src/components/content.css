@@ -1,0 +1,25 @@
+.content__container {
+  height: 100%;
+  width: 100%;
+  display: relative;
+}
+
+.content__main {
+  padding-left: 10em;
+  padding-right: 10em;
+  width: 80%;
+}
+
+.content__advertising {
+  position: fixed;
+  top: 8em;
+  right: 1em;
+
+  width: 20%;
+  padding-right: 2em;
+
+  display: fixed;
+  height: 85vh;
+  background-image: url('https://source.unsplash.com/random');
+  border-left: solid 1px rgba(0, 0, 0, 0.1);
+}

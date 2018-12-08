@@ -1,0 +1,12 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.main_content {
+  margin-top: 6em;
+  padding-top: 2em;
+}

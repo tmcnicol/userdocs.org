@@ -1,0 +1,31 @@
+.header__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
+
+  display: grid;
+  grid-column-gap: 5%;
+  grid-template-columns: 1fr 4fr 1fr;
+
+  background: white;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.header__logo{
+  margin-left: 1em;
+  text-decoration: overline;
+  grid-column: 1;
+  display: inline;
+  float: left;
+}
+
+.header__search {
+  grid-column: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
