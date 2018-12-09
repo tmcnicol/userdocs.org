@@ -9,7 +9,7 @@ function queryReducer(state=initialState, action) {
     case QUERY_UPDATE:
       return {
         ...state,
-        queryString: action.payload.queryString,
+        queryString: action.payload.queryString.toLocaleLowerCase(),
       }
     default:
       return state

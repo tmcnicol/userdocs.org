@@ -28,16 +28,26 @@ class ResultsList extends Component {
     super(props)
 
     this.classProp = props.className
-  }
-  render () {
-    const results = [
+    this.results = [
       { key: 'Server', short: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.'},
       { key: 'Database', short: 'A system to store and access data in a structured way.'},
     ]
+  }
+
+  filterResults() {
+    if (this.props.queryString.length === 0) {
+      return this.results
+    }
+    return this.results.filter(({ key }) => {
+      return key.toLocaleLowerCase().includes(this.props.queryString)
+    })
+  }
+
+  render () {
+    const filteredResults = this.filterResults()
     return (
       <div className={ this.classProp }>
-        { this.props.queryString }
-        { results.map((result) => resultItem(result)) }
+        { filteredResults.map((result) => resultItem(result)) }
       </div>
     )
   }
