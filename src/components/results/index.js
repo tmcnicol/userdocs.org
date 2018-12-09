@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
 import './results.css'
 
 function resultItem (item) {
   const { key, short } = item;
   return (
-    <div className='listItem'>
+    <div className='listItem' key={ key }>
       <strong className='listItem__key'>
         { key }
       </strong>
@@ -28,10 +30,16 @@ class ResultsList extends Component {
     ]
     return (
       <div className={ this.classProp }>
+        { this.props.queryString }
         { results.map((result) => resultItem(result)) }
       </div>
     )
   }
 }
 
-export default ResultsList
+function mapStateToProps(state) {
+  console.log(state)
+  return { queryString: state.queries.queryString }
+}
+
+export default connect(mapStateToProps)(ResultsList)
