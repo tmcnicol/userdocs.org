@@ -1,0 +1,45 @@
+.detail__card {
+  width: 100%;
+  padding: 1em 1em 2em;
+
+  background: white;
+
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail__card__body {
+  min-height: 15em;
+}
+
+.detail__card__name::after {
+  content: '-';
+  margin: 0.5em;
+}
+
+.detail__card__divide {
+  margin: 1.5em 3em 0.5em;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.detail__card__footer {
+  width: 100%;
+  margin-right: 3em;
+}
+
+.detail__card__navlist {
+  list-style: none;
+  float: right;
+  margin-right: 3em;
+}
+
+.detail__card__navlist > li {
+  margin-left: 1em;
+  float: left;
+}
+
+.detail__card__navlist > li > a {
+  color: black;
+}
