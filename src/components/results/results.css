@@ -11,8 +11,8 @@
   text-overflow: ellipsis;
 }
 
-.listItem__key {
-  max-width: 10%;
+.listItem__key__link {
+  color: black;
 }
 
 .listItem__key::after {

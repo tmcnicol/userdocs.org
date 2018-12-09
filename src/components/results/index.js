@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 
 import './results.css'
 
@@ -8,7 +9,12 @@ function resultItem (item) {
   return (
     <div className='listItem' key={ key }>
       <strong className='listItem__key'>
-        { key }
+        <NavLink
+          className='listItem__key__link'
+          to={key.toLocaleLowerCase()}
+        >
+          { key }
+        </NavLink>
       </strong>
       <p className='listItem__text'>
         { short }

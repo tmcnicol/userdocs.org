@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
+
 import ResultsList from './results'
+import ResultDetail from './detail'
 
 import './content.css'
 
@@ -14,7 +17,8 @@ class Content extends Component {
       <div className={ this.classProp }>
         <div className='content__container'>
           <div className='content__main'>
-            <ResultsList />
+              <Route exact path='/' component={ResultsList} />
+              <Route path='/:key' component={ResultDetail} />
           </div>
           <div className='content__advertising'>
           </div>
