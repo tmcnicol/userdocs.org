@@ -44,7 +44,6 @@ class ResultsList extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state)
   return { queryString: state.queries.queryString }
 }
 

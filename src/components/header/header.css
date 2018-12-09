@@ -15,12 +15,17 @@
   overflow: hidden;
 }
 
-.header__logo{
+.header__logo {
   margin-left: 1em;
   text-decoration: overline;
   grid-column: 1;
   display: inline;
   float: left;
+}
+
+.header__logo__link {
+  text-decoration: none;
+  color: black;
 }
 
 .header__search {
