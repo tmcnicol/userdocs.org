@@ -26,35 +26,34 @@ function resultItem (item) {
 class ResultsList extends Component {
   constructor(props) {
     super(props)
-
     this.classProp = props.className
-    this.results = [
-      { key: 'Server', short: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.'},
-      { key: 'Database', short: 'A system to store and access data in a structured way.'},
-    ]
   }
 
-  filterResults() {
+  filterDocuments() {
     if (this.props.queryString.length === 0) {
-      return this.results
+      return this.props.documents
     }
-    return this.results.filter(({ key }) => {
+
+    return this.props.documents.filter(({ key }) => {
       return key.toLocaleLowerCase().includes(this.props.queryString)
     })
   }
 
   render () {
-    const filteredResults = this.filterResults()
+    const filteredDocuments = this.filterDocuments()
     return (
       <div className={ this.classProp }>
-        { filteredResults.map((result) => resultItem(result)) }
+        { filteredDocuments.map((result) => resultItem(result)) }
       </div>
     )
   }
 }
 
 function mapStateToProps(state) {
-  return { queryString: state.queries.queryString }
+  return {
+    queryString: state.queries.queryString ,
+    documents: state.documents,
+  }
 }
 
 export default connect(mapStateToProps)(ResultsList)

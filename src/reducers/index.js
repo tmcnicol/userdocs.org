@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux'
-import queryReducer from './queryReducer'
+
+import documentReducer from './documents'
+import queryReducer from './queries'
 
 const reducers = {
+  documents: documentReducer,
   queries: queryReducer,
 }
 

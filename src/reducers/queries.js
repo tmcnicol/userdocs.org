@@ -17,4 +17,3 @@ function queryReducer(state=initialState, action) {
 }
 
 export default queryReducer
-
