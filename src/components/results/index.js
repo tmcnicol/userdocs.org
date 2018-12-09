@@ -5,15 +5,15 @@ import { NavLink } from 'react-router-dom'
 import './results.css'
 
 function resultItem (item) {
-  const { key, short } = item;
+  const { key, name,short } = item;
   return (
     <div className='listItem' key={ key }>
       <strong className='listItem__key'>
         <NavLink
           className='listItem__key__link'
-          to={key.toLocaleLowerCase()}
+          to={key}
         >
-          { key }
+          { name }
         </NavLink>
       </strong>
       <p className='listItem__text'>
@@ -35,7 +35,7 @@ class ResultsList extends Component {
     }
 
     return this.props.documents.filter(({ key }) => {
-      return key.toLocaleLowerCase().includes(this.props.queryString)
+      return key.includes(this.props.queryString)
     })
   }
 
